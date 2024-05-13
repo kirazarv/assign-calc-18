@@ -1,0 +1,87 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using lab18;
+using System.Collections.Generic;
+
+namespace UnitTestCalc1
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        public string noException="no expected exception";
+        //тестирование первого if функции Calculate с корректными числами x < 1 && c != 0
+        [TestMethod]
+        public void CalculateTestCorrectNumbersIf1()
+        {
+            // Аргументы для первого случая
+            double a = 2;
+            double b = 4;
+            double c = 2;
+            double x = 0.5;
+            double expectedResult = 2.5;
+
+            // Вызов функции и проверка результата
+            double result = Calc.Calculate(a, b, c, x);
+            Assert.AreEqual(expectedResult, result, "Function F result is incorrect for case 1.");
+        }
+
+        //тестирование второго if функции Calculate с корректными числами x > 1.5 && c == 0
+        [TestMethod]
+        public void CalculateTestCorrectNumbersIf2()
+        {
+            // Аргументы для второго случая
+            double a = 2;
+            double b = 4;
+            double c = 0;
+            double x = 2.5;
+            double expectedResult = 0.08;
+
+            // Вызов функции, который должен вызвать исключение
+            double result = Calc.Calculate(a, b, c, x);
+            Assert.AreEqual(expectedResult, result, "Function F result is incorrect for case 2.");
+        }
+
+        //тестирование третьго if функции Calculate с корректными числами при с!=0
+        [TestMethod]
+        public void CalculateTestCorrectNumbersIf3()
+        {
+            // Аргументы для третьего случая
+            double a = 2;
+            double b = 4;
+            double c = 2;
+            double x = 2;
+            double expectedResult = 1;
+
+            // Вызов функции и проверка результата
+            double result = Calc.Calculate(a, b, c, x);
+            Assert.AreEqual(expectedResult, result, "Function F result is incorrect for case 3.");
+        }
+
+        //тестирование выброса исключения при с=0 и x<1.5
+        [TestMethod]
+        public void CalculateExceptionDivideByZeroTest()
+        {
+            //arrange
+            bool isException = false;
+        
+            double a = 2;
+            double b = 4;
+            double c = 0;
+            double x = 1.3;
+            
+            //act and assert
+            try
+            {
+                // Вызов функции, который должен вызвать исключение
+                double result = Calc.Calculate(a, b, c, x);
+            }
+            catch (DivideByZeroException)
+            {
+                isException = true;
+            }
+            Assert.IsTrue(isException,noException);         
+        }
+     
+
+    }
+}
