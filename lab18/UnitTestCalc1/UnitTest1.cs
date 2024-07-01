@@ -9,6 +9,7 @@ namespace UnitTestCalc1
     public class UnitTest1
     {
         public string noException="no expected exception";
+
         //тестирование первого if функции Calculate с корректными числами x < 1 && c != 0
         [TestMethod]
         public void CalculateTestCorrectNumbersIf1()
@@ -81,7 +82,20 @@ namespace UnitTestCalc1
             }
             Assert.IsTrue(isException,noException);         
         }
-     
 
+        //второй вариант тестирование выброса исключения при с=0 и x<1.5
+        [TestMethod]
+        public void ThrowsExceptionDivideByZeroTest()
+        {
+            // Аргументы для теста
+            double a = 1.0;
+            double b = 2.0;
+            double c = 0.0;
+            double x = 1.2;
+
+            // Проверка ожидаемого исключения
+            Assert.ThrowsException<DivideByZeroException>(() => Calc.Calculate(a, b, c, x));
+        }
+       
     }
 }

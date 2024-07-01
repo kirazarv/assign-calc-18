@@ -5,3 +5,10 @@ D:\Users\User\repos VS\lab18\lab18\lab18\obj\Debug\lab18.csproj.AssemblyReferenc
 D:\Users\User\repos VS\lab18\lab18\lab18\obj\Debug\lab18.csproj.CoreCompileInputs.cache
 D:\Users\User\repos VS\lab18\lab18\lab18\obj\Debug\lab18.exe
 D:\Users\User\repos VS\lab18\lab18\lab18\obj\Debug\lab18.pdb
+D:\Users\User\repos VS\тестирование\lab18\lab18\lab18\bin\Debug\lab18.exe.config
+D:\Users\User\repos VS\тестирование\lab18\lab18\lab18\bin\Debug\lab18.exe
+D:\Users\User\repos VS\тестирование\lab18\lab18\lab18\bin\Debug\lab18.pdb
+D:\Users\User\repos VS\тестирование\lab18\lab18\lab18\obj\Debug\lab18.csproj.AssemblyReference.cache
+D:\Users\User\repos VS\тестирование\lab18\lab18\lab18\obj\Debug\lab18.csproj.CoreCompileInputs.cache
+D:\Users\User\repos VS\тестирование\lab18\lab18\lab18\obj\Debug\lab18.exe
+D:\Users\User\repos VS\тестирование\lab18\lab18\lab18\obj\Debug\lab18.pdb
